@@ -1,0 +1,43 @@
+@use 'variaveis';
+
+.info-bar {
+    padding: 16px 24px;
+    background-color: variaveis.$corTexto;
+    display: flex;
+    justify-content: space-between;
+    
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: variaveis.$corTextoSecundaria;
+
+            b {
+                font-size: 18px;
+                display: block;
+                color: variaveis.$corTextoSecundaria;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        
+        &__info {
+            gap: 16px;
+        }
+    }
+    
+    @media (max-width: 640px) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
